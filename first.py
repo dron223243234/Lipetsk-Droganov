@@ -1,6 +1,5 @@
-from PyQt6 import uic
 from PyQt6.QtGui import QPainter, QColor
-from PyQt6.QtWidgets import QWidget, QApplication
+from PyQt6.QtWidgets import QWidget, QApplication, QPushButton
 import random
 import sys
 
@@ -8,7 +7,8 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.show_circle = False
-        uic.loadUi('ui.ui', self)
+        self.pushButton = QPushButton('кнопка', self)
+        self.pushButton.move(30, 30)
         self.pushButton.clicked.connect(self.famous)
 
     def famous(self):
@@ -21,7 +21,7 @@ class MainWindow(QWidget):
             return
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
-        painter.setBrush(QColor('yellow'))
+        painter.setBrush(QColor(f'#{random.randint(10000000, 99999999)}'))
         x = random.randint(200, 1000)
         painter.drawEllipse(30, 70, x, x)
         painter.end()
