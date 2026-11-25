@@ -8,7 +8,7 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.show_circle = False
-        uic.loadUi('untitled.ui', self)
+        uic.loadUi('ui.ui', self)
         self.pushButton.clicked.connect(self.famous)
 
     def famous(self):
