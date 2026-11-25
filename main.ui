@@ -16,14 +16,24 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>30</y>
-     <width>281</width>
-     <height>241</height>
+     <x>150</x>
+     <y>0</y>
+     <width>71</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>кнопка</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>381</width>
+     <height>261</height>
+    </rect>
    </property>
   </widget>
  </widget>
